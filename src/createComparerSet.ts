@@ -1,9 +1,15 @@
-import { EqualityComparer } from 'ts-equality-comparer'
+import { EqualityComparer, isEqualityComparer } from 'ts-equality-comparer'
 import { createHashTable } from './hash-table/createHashTable'
-export const createComparerSet = <K>(
-  capacity: number = 0,
-  comparer?: EqualityComparer<K>
-): Set<K> => {
+export function createComparerSet<K>(capacity: number, comparer: EqualityComparer<K>): Set<K>
+export function createComparerSet<K>(comparer?: EqualityComparer<K>): Set<K>
+export function createComparerSet<K>(
+  capacityOrComparer: number | EqualityComparer<K> = 0,
+  comparerOrUndefined?: EqualityComparer<K>
+): Set<K> {
+  const comparer: EqualityComparer<K> | undefined = isEqualityComparer(capacityOrComparer)
+    ? capacityOrComparer
+    : comparerOrUndefined
+  const capacity: number = typeof capacityOrComparer === 'number' ? capacityOrComparer : 0
   if (!comparer) {
     return new Set<K>()
   }

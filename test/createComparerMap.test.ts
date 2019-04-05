@@ -276,6 +276,18 @@ describe('hashtable', () => {
     expect([...ht.entries()].map(([k]) => k).sort((a, b) => a - b)).toEqual(range(0, 1000))
     expect([...ht[Symbol.iterator]()].map(([x]) => x)).toEqual(range(0, 1000))
   })
+  it("doesn't need a capacity", () => {
+    const ht = createComparerMap<number, number>({
+      equals: (a, b) => a === b,
+      getHashCode: getHashCode
+    })
+    const numItems = 1000
+    range(0, numItems).forEach(i => ht.set(i, i))
+    expect([...ht.keys()].sort((a, b) => a - b)).toEqual(range(0, 1000))
+    expect([...ht.values()].sort((a, b) => a - b)).toEqual(range(0, 1000))
+    expect([...ht.entries()].map(([k]) => k).sort((a, b) => a - b)).toEqual(range(0, 1000))
+    expect([...ht[Symbol.iterator]()].map(([x]) => x)).toEqual(range(0, 1000))
+  })
 })
 describe('defaultSortMethod', () => {
   it('works', () => {

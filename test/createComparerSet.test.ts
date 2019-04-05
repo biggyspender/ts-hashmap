@@ -1,6 +1,7 @@
 import { createComparerSet } from '../src/ts-hashmap'
-import { deepEqualityComparer } from 'ts-equality-comparer'
+import { deepEqualityComparer, EqualityComparer } from 'ts-equality-comparer'
 import { range } from './range'
+import { getHashCode } from 'ts-gethashcode'
 
 describe('createComparerSet', () => {
   it('works', () => {
@@ -33,5 +34,24 @@ describe('createComparerSet', () => {
     }
     testSet(createComparerSet<number>(0, deepEqualityComparer))
     testSet(createComparerSet<number>())
+  })
+  const caseInsensitiveComparer: EqualityComparer<string> = {
+    equals: (a, b) => a.toLowerCase() === b.toLowerCase(),
+    getHashCode: x => getHashCode(x.toLowerCase())
+  }
+
+  it('can be case insensitive', () => {
+    const names = ['zebra', 'antelope', 'ardvaark', 'tortoise', 'turtle', 'dog', 'frog']
+    const set = createComparerSet(caseInsensitiveComparer)
+    names.forEach(n => set.add(n))
+    expect(set.has('DOg')).toBeTruthy()
+    expect(set.has('badger')).toBeFalsy()
+  })
+  it('can have a capacity', () => {
+    const names = ['zebra', 'antelope', 'ardvaark', 'tortoise', 'turtle', 'dog', 'frog']
+    const set = createComparerSet(names.length, caseInsensitiveComparer)
+    names.forEach(n => set.add(n))
+    expect(set.has('DOg')).toBeTruthy()
+    expect(set.has('badger')).toBeFalsy()
   })
 })
