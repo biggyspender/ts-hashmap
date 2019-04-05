@@ -86,14 +86,6 @@ export class HashTable<TKey, TValue> implements Map<TKey, TValue> {
     }
     const idx = items[0]
 
-    // const idx = blinq(bucket)
-    //   .select(([k, v], i) => ({ k, v, i }))
-    //   .where(({ k }) => this.comparer.equals(k, key))
-    //   .select(({ i }) => i)
-    //   .singleOrDefault()
-    if (typeof idx === 'undefined') {
-      return false
-    }
     bucket.splice(idx, 1)
     --this.count
     return true
