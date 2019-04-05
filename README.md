@@ -1,6 +1,6 @@
-## A hashtable-based implementation of Map<K,V> and Set<V>
+## A hashtable-based implementation of `Map<K,V>` and `Set<V>`
 
-### A case-insensitve set, using EqualityComparer<T>
+### A case-insensitve set, using [`EqualityComparer<T>`](https://github.com/biggyspender/ts-equality-comparer)
 
     const names = ["zebra", "antelope", "ardvaark", "tortoise", "turtle", "dog", "frog"]
     const comparer: EqualityComparer<string> = {
