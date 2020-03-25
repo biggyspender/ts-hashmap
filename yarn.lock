@@ -8211,32 +8211,32 @@ trim-right@^1.0.1:
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
-ts-deep-equal@^1.1.0:
+ts-deep-equal@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/ts-deep-equal/-/ts-deep-equal-1.1.4.tgz#9aec58a6f1a440388ab26ce5346941ce63bc71b3"
+  integrity sha512-jz0iqYExbXgZ2LM89onnBPBqlAlY8OzEzoC3QlzaFJRRRG26g34fhxCcYBHhDEKoBzfcDYCyC+gqLbkCwqOSIA==
+  dependencies:
+    ts-entries "^1.1.1"
+
+ts-entries@^1.1.1:
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ts-deep-equal/-/ts-deep-equal-1.1.1.tgz#a7cf51e4893049b03445a77b06ca8b60e50b904c"
-  integrity sha512-x8lWnFl/TigvevxjFMvQ8Gq+SbzBg2AgkRJB+ggGosqwIqL92FwIKyn0bMPMqPyFOZiwBPBJMSqMiMU7blgPng==
-  dependencies:
-    ts-entries "^1.1.0"
+  resolved "https://registry.yarnpkg.com/ts-entries/-/ts-entries-1.1.1.tgz#ebbab301fad3d8fe30f69ea4a72fe7fd6a381f2d"
+  integrity sha512-pogJm20/dK5B58PmuAXuGdOp9eT2T+njfC0dYiejbGB8TZV1pXZpNKRwIPRrx7gKqnsouJ/pLuyPxuzQV8dgSA==
 
-ts-entries@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/ts-entries/-/ts-entries-1.1.0.tgz#915544e408402919dcc79c20d7d9be776cd8c623"
-  integrity sha512-IOrmt/2+Yfd12GVybSyj7RvsrpD8kpCfTxzk/W9YDBkU9DRtTzKeQh9AqwN4KmNCBUT4L5Vbuo7wRL2ckAzklg==
-
-ts-equality-comparer@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ts-equality-comparer/-/ts-equality-comparer-1.0.0.tgz#7d63739fb3230d350c9312340ab3390c61beabfd"
-  integrity sha512-Y0uZtnDVz5gqefI/2RhsCWPDsvpPB+QHc6xz7yaDRVyGsFZahnc5tJy7gYQ8xKPXuGX8i5T+roSFBXmtm951JA==
+ts-equality-comparer@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ts-equality-comparer/-/ts-equality-comparer-1.0.2.tgz#054ba11bfffd6d09d5298faa74e578e6a85a83e5"
+  integrity sha512-K/gt7QLggtFXaHrxEhpJ0tU8646bTHoQkQeInCl3TJsGZ2vAiBWLbtRmv8E8cPBkp0Y9bfGFz7RVd0WftukZsw==
   dependencies:
-    ts-deep-equal "^1.1.0"
-    ts-gethashcode "^1.0.0"
+    ts-deep-equal "^1.1.4"
+    ts-gethashcode "^1.0.1"
 
-ts-gethashcode@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ts-gethashcode/-/ts-gethashcode-1.0.0.tgz#b76a5d46bb083bd235b12bcb4305293675d4bef7"
-  integrity sha512-GpweMyFie73qUZsLSG9OnvjqybWbTXCv9rBB+bEZCTzL4tZcRW5pd96OizVkFGygfJcUXgW3giJVeAv5VLLJHg==
+ts-gethashcode@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ts-gethashcode/-/ts-gethashcode-1.0.1.tgz#8c89bb8b6dd1b07f68b548eec3f17ebbcd065578"
+  integrity sha512-QxAQtQHGYni9gxN92nJhOhu7b3Agyj2/xX9QPz5KubXPXzKwElggeQZGm+ltqwLC8GyC7bpyVCY9+btolXhW9g==
   dependencies:
-    ts-entries "^1.1.0"
+    ts-entries "^1.1.1"
 
 ts-jest@^23.10.2:
   version "23.10.5"

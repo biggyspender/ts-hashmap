@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "",
   "keywords": [],
+  "sideEffects": false,
   "main": "dist/ts-hashmap.umd.js",
   "module": "dist/ts-hashmap.es5.js",
   "typings": "dist/types/ts-hashmap.d.ts",
@@ -118,7 +119,7 @@
     "typescript": "^3.0.3"
   },
   "dependencies": {
-    "ts-equality-comparer": "^1.0.0",
-    "ts-gethashcode": "^1.0.0"
+    "ts-equality-comparer": "^1.0.2",
+    "ts-gethashcode": "^1.0.1"
   }
 }
